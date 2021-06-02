@@ -52,7 +52,7 @@ const substitutionModule = (function() {
       }
 
       if (encode) return mapInput(message, abc, splitAlphabet).join("");
-      return mapInput, splitAlphabet, abc).join("");
+      return (mapInput, splitAlphabet, abc).join("");
 }
 
 
