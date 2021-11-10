@@ -57,7 +57,6 @@
               letters to the right or left, based on the typical alphabetic
               order.
             </p>
-            <hr />
             <form id="caesar">
               <div class="form-group">
                 <div class="form-check form-check-inline">
@@ -108,7 +107,6 @@
               a coordinate. For example, in the above table, the letter "B"
               would be represented by the numerical pair "21".
             </p>
-            <hr />
             <form id="polybius">
               <div class="form-group">
                 <div class="form-check form-check-inline">
@@ -124,7 +122,7 @@
               </div>
               <div class="form-group">
                 <label for="polybius-input">Your message</label>
-                <textarea class="form-control border-0 text-white" id="polybius-input" rows="3" style="background-color: #06089b;"></textarea>
+                <textarea class="form-control border-0 text-white" id="polybius-input" rows="3" style="background-color: #06089b; color: white"></textarea>
               </div>
               <button class="btn text-white" type="submit"  style="background-color: #23af1c;">Submit</button>
             </form>
@@ -143,11 +141,11 @@
     <!-- Substitution -->
     <section id="substitution-cipher" class="row mt-4">
       <div class="col">
-        <div class="card border-0">
-          <div class="card-header bg-success text-white">
+        <div class="card border-0 text-white">
+          <div class="card-header border-0 text-white" style="background-color: #c22323;">
             <h2 class="my-2">Substitution Cipher</h2>
           </div>
-          <div class="card-body">
+          <div class="card-body"  style="background-color: #c26060;">
             <p>
               The Substitution Cipher requires a standard alphabet and a
               substitution alphabet. Letters from the standard alphabet will
@@ -155,7 +153,6 @@
               that the recipient have the substitution alphabet, otherwise it
               will be difficult for them to decode the message.
             </p>
-            <hr />
             <form id="substitution">
               <div class="form-group">
                 <div class="form-check form-check-inline">
@@ -171,19 +168,19 @@
               </div>
               <div class="form-group">
                 <label for="substitution-input">Your message</label>
-                <textarea class="form-control" id="substitution-input" rows="3"></textarea>
+                <textarea class="form-control border-0" id="substitution-input" style="background-color: #c22323; color: white;" rows="3"></textarea>
               </div>
               <div class="form-group">
                 <label for="substitution-alphabet">Alphabet key</label>
-                <input type="text" class="form-control" id="substitution-alphabet" maxlength="26" />
+                <input type="text" class="form-control border-0" id="substitution-alphabet"  style="background-color: #c22323; color: white;" maxlength="26" />
               </div>
-              <button class="btn btn-primary" type="submit">Submit</button>
+              <button class="btn border-0 text-white" type="submit" style="background-color: #23af1c;">Submit</button>
             </form>
           </div>
           <div id="substitution-alert" class="alert alert-danger mb-0 rounded-0 d-none" role="alert">
             Something went wrong! Check your input and alphabet key.
           </div>
-          <div class="card-footer">
+          <div class="card-footer border-0" style="background-color: #c22323;">
             Output:
             <span class="font-weight-bold" id="substitution-output">No message as of yet...</span>
           </div>
