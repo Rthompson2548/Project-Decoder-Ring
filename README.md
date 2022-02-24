@@ -20,7 +20,5 @@ The prior methods of encoding and decoding messages are the main features within
 - [ ] CSS
 - [ ] HTML
 
-## Images
-![final-decoder-ring-caesar-shift-page](https://user-images.githubusercontent.com/80596387/141701673-bd6d52fe-a858-44c2-8e31-bc065b294957.png)
-![final-decoder-ring-polybius-page](https://user-images.githubusercontent.com/80596387/141701676-9fab105f-02ca-4469-8ddc-a765c0c85531.png)
-![final-decoder-ring-substitution-page](https://user-images.githubusercontent.com/80596387/141701678-b7a56acf-b5d8-4dbd-be83-543d380a6d0d.png)
+## Preview
+![decord-ring-app](https://user-images.githubusercontent.com/80596387/155625602-eacebef1-bb54-4682-a419-ddbcf17769db.PNG)
