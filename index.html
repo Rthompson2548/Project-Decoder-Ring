@@ -9,182 +9,154 @@
   <link rel="stylesheet" type="text/css" href="index.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-  <title>Decoder Ring</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Work+Sans&display=swap" rel="stylesheet">
+  <title>Crypto-messenger</title>
 </head>
 
 <body>
-  <header class="container-fluid border-0 text-dark mb-5 pb-5">
+  <header class="container-fluid border-0">
     <div class="nav-bar fixed-top">
       <div class="nav-bar">
-
-        <a href="#caesar-shift">
-          <span class="nav-bar-item">
-            Caesar Shift
-          </span>
-        </a>
-        <a href="#polybius-square">
-          <span class="nav-bar-item">
-            Polybius Square
-          </span>
-        </a>
-        <a href="#substitution-cipher">
-          <span class="nav-bar-item">
-            Substitution Cipher
-          </span>
-        </a>
+        <a href="#caesar-shift"> <span class="nav-bar-item">
+            Caesar shift
+          </span> </a>
+          <a href="#polybius-square"> <span class="nav-bar-item">
+            Polybius square
+          </span> </a>
+          <a href="#substitution-cipher"> <span class="nav-bar-item">
+            Substitution cipher
+          </span> </a>
       </div>
     </div>
   </header>
-
-  <main class="container my-4">
-
-    <span class="page-title">
-      Decoder Ring
+  <main> <span class="page-title">
+      Crypto-messenger
     </span>
 
-    <!-- Caesar Shift -->
-    <section class="language-card">
-      <div id="caesar-shift">
-        <div class="card-header">
-          <h2>Caesar Shift</h2>
-        </div>
-        <div class="card-body">
-          <p>
-            The Caesar Shift is a type of substitution cipher originally
-            used by Julius Caesar to protect messages of military
-            significance. It relies on taking the alphabet and "shifting"
-            letters to the right or left, based on the typical alphabetic
-            order.
-          </p>
-          <form id="caesar">
-            <div class="form-group">
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="caesar-options" id="caesar-options-encode"
-                  value="encode" checked />
-                <label class="form-check-label" for="caesar-options-encode">Encode</label>
+    <div class="page-content">
+      <!-- Caesar Shift -->
+      <section class="language-card">
+        <div id="caesar-shift">
+          <div class="card-header">
+            <h2 class="language-card-title">Caesar Shift</h2>
+            </div>
+            <div class="card-body">
+            <p class="language-card-description"> The Caesar Shift is a type of substitution cipher originally used by
+              Julius Caesar to protect messages of military significance. It relies on taking the alphabet and
+              "shifting" letters to the right or left, based on the typical alphabetic order. </p>
+            <form id="caesar">
+              <div class="encode-decode-options">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="caesar-options" id="caesar-options-encode" value="encode"
+                    checked />
+                  <label class="form-check-label" for="caesar-options-encode">Encode</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="caesar-options" id="caesar-options-decode" value="decode" />
+                  <label class="form-check-label" for="caesar-options-decode">Decode</label>
+                </div>
               </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="caesar-options" id="caesar-options-decode"
-                  value="decode" />
-                <label class="form-check-label" for="caesar-options-decode">Decode</label>
+              <div class="form-group">
+                <label for="caesar-input">Your message</label>
+                <textarea class="form-control" id="caesar-input" rows="2"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="caesar-shift">Shift number</label>
+                  <input type="number" class="form-control" id="caesar-shift" />
+                </div>
+              <div class="submit-button-container">
+                <button class="submit-button" type="submit">Submit</button>
               </div>
+            </form>
             </div>
-            <div class="form-group">
-              <label for="caesar-input">Your message</label>
-              <textarea class="form-control" id="caesar-input" rows="3"></textarea>
+          <div id="caesar-alert" class="alert alert-danger d-none" role="alert"> Something went wrong! Check your input
+            and the shift amount and try again. </div>
+          <div class="card-footer"><span class="font-weight-bold" id="caesar-output"></span> </div>
+          </div>
+          </section>
+      <!-- Polybius -->
+      <section class="language-card">
+        <div id="polybius-square">
+          <div class="card-header">
+            <h2 class="language-card-title">Polybius Square</h2>
             </div>
-            <div class="form-group">
-              <label for="caesar-shift">Shift number</label>
-              <input type="number" class="form-control" id="caesar-shift" />
+            <div class="card-body">
+            <p class="language-card-description"> The Polybius Square is a cipher that is achieved by arranging a
+              typical alphabet into a grid. Each letter is represented through a coordinate. For example, in the above
+              table, the letter "B" would be represented by the numerical pair "21". </p>
+            <form id="polybius">
+              <div class="encode-decode-options">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="polybius-options" id="polybius-options-encode" value="encode"
+                    checked />
+                  <label class="form-check-label" for="polybius-options-encode">Encode</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="polybius-options" id="polybius-options-decode" value="decode" />
+                  <label class="form-check-label" for="polybius-options-decode">Decode</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="polybius-input">Your message</label>
+                <textarea class="form-control" id="polybius-input" rows="2"></textarea>
+                </div>
+              <div class="submit-button-container">
+                <button class="submit-button" type="submit">Submit</button>
+              </div>
+            </form>
             </div>
-            <button class="submit-button" type="submit">Submit</button>
-          </form>
-        </div>
-        <div id="caesar-alert" class="alert alert-danger mb-0 rounded-0 d-none" role="alert">
-          Something went wrong! Check your input and the shift amount and
-          try again.
-        </div>
-        <div class="card-footer">
-          Output:
-          <span class="font-weight-bold" id="caesar-output">No message as of yet...</span>
-        </div>
-      </div>
-    </section>
+          <div id="polybius-alert" class="alert alert-danger d-none" role="alert"> Something went wrong! Check your
+            input and try again. </div>
+          <div class="card-footer"><span class="font-weight-bold" id="polybius-output"></span> </div>
+          </div>
+          </section>
+      <!-- Substitution -->
+      <section class="language-card" id="substitution-cipher">
+        <div>
+          <div class="card-header">
+            <h2 class="language-card-title">Substitution Cipher</h2>
+            </div>
+            <div class="card-body">
+            <p class="language-card-description"> The Substitution Cipher requires a standard alphabet and a
+              substitution alphabet. Letters from the standard alphabet will be transposed to the standard alphabet.
+              This cipher requires that the recipient have the substitution alphabet, otherwise it will be difficult for
+              them to decode the message. </p>
+            <form id="substitution">
+              <div class="encode-decode-options">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="substitution-options" id="substitution-options-encode"
+                    value="encode" checked />
+                  <label class="form-check-label" for="substitution-options-encode">Encode</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="substitution-options" id="substitution-options-decode"
+                    value="decode" />
+                  <label class="form-check-label" for="substitution-options-decode">Decode</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="substitution-input">Your message</label>
+                <textarea class="form-control" id="substitution-input" rows="2"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="substitution-alphabet">Alphabet key</label>
+                  <input type="text" class="form-control" id="substitution-alphabet" maxlength="26" />
+                </div>
+              <div class="submit-button-container">
+                <button class="submit-button" type="submit">Submit</button>
+              </div>
+            </form>
+            </div>
+          <div id="substitution-alert" class="alert alert-danger rounded-0 d-none" role="alert"> Something went wrong!
+            Check your input and alphabet key. </div>
+          <div class="card-footer border-0"><span class="font-weight-bold" id="substitution-output"></span> </div>
+          </div>
+          </section>
+    </div>
 
-    <!-- Polybius -->
-    <section class="language-card">
-      <div id="polybius-square">
-
-        <div class="card-header">
-          <h2>Polybius Square</h2>
-        </div>
-        <div class="card-body">
-          <p>
-            The Polybius Square is a cipher that is achieved by arranging a
-            typical alphabet into a grid. Each letter is represented through
-            a coordinate. For example, in the above table, the letter "B"
-            would be represented by the numerical pair "21".
-          </p>
-          <form id="polybius">
-            <div class="form-group">
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="polybius-options" id="polybius-options-encode"
-                  value="encode" checked />
-                <label class="form-check-label" for="polybius-options-encode">Encode</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="polybius-options" id="polybius-options-decode"
-                  value="decode" />
-                <label class="form-check-label" for="polybius-options-decode">Decode</label>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="polybius-input">Your message</label>
-              <textarea class="form-control" id="polybius-input" rows="3"></textarea>
-            </div>
-            <button class="submit-button" type="submit">Submit</button>
-          </form>
-        </div>
-        <div id="polybius-alert" class="alert alert-danger mb-0 rounded-0 d-none" role="alert">
-          Something went wrong! Check your input and try again.
-        </div>
-        <div class="card-footer">
-          Output:
-          <span class="font-weight-bold" id="polybius-output">No message as of yet...</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Substitution -->
-    <section class="language-card" id="substitution-cipher">
-      <div>
-        <div class="card-header">
-          <h2>Substitution Cipher</h2>
-        </div>
-        <div class="card-body">
-          <p>
-            The Substitution Cipher requires a standard alphabet and a
-            substitution alphabet. Letters from the standard alphabet will
-            be transposed to the standard alphabet. This cipher requires
-            that the recipient have the substitution alphabet, otherwise it
-            will be difficult for them to decode the message.
-          </p>
-          <form id="substitution">
-            <div class="form-group">
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="substitution-options"
-                  id="substitution-options-encode" value="encode" checked />
-                <label class="form-check-label" for="substitution-options-encode">Encode</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="substitution-options"
-                  id="substitution-options-decode" value="decode" />
-                <label class="form-check-label" for="substitution-options-decode">Decode</label>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="substitution-input">Your message</label>
-              <textarea class="form-control" id="substitution-input" rows="3"></textarea>
-            </div>
-            <div class="form-group">
-              <label for="substitution-alphabet">Alphabet key</label>
-              <input type="text" class="form-control" id="substitution-alphabet" maxlength="26" />
-            </div>
-            <button class="submit-button" type="submit">Submit</button>
-          </form>
-        </div>
-        <div id="substitution-alert" class="alert alert-danger mb-0 rounded-0 d-none" role="alert">
-          Something went wrong! Check your input and alphabet key.
-        </div>
-        <div class="card-footer border-0">
-          Output:
-          <span class="font-weight-bold" id="substitution-output">No message as of yet...</span>
-        </div>
-      </div>
-    </section>
   </main>
-
   <script src="./scripts/setup.js"></script>
   <script src="./src/caesar.js"></script>
   <script src="./src/polybius.js"></script>
