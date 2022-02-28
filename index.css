@@ -12,16 +12,19 @@ html, body, #page {
     padding:0;
 }
 
+input, textarea {
+  font-size: 12px !important;
+}
 
 .page-content {
   font-family: 'Montserrat', sans-serif;
-  padding: 0px 36px 42px 36px;
+  padding: 0px 36px 48px 36px;
 }
 
 .page-title {
   color: #fff;
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 36px;
+  font-weight: bold;
   display: flex;
   letter-spacing: 1.5px;
   justify-content: center;
@@ -32,7 +35,6 @@ html, body, #page {
   display: flex;
   justify-content: center;
   padding: 4px 0;
-  /* margin-right: 5px; */
 }
 
 .nav-bar-item {
@@ -57,8 +59,8 @@ html, body, #page {
   color: #000;
   border: none;
   border-radius: 8px;
-  margin: 10px 16px 0px 16px;
-  padding: 10px 20px;
+  margin: 42px 16px 6px 16px;
+  padding: 20px;
 }
 
 .language-card-title {
@@ -97,6 +99,7 @@ html, body, #page {
   .page-content {
     display: flex;
   }
+
 
   .nav-bar {
     justify-content: end;
