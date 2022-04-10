@@ -6,29 +6,30 @@
 }
 
 html, body, #page {
+    /* height:100%;
+    width:100%; */
     margin:0;
     padding:0;
-    font-family: 'Montserrat', sans-serif;
 }
 
 input, textarea {
-  font-size: 16px !important;
-  border-radius: 20px;
-  padding: 12px 24px 12px 12px !important;
+  font-size: 12px !important;
 }
 
 .page-content {
+  font-family: 'Space Mono', monospace;
   align-items: center;
+  /* width: 750px; */
 }
 
 .page-title {
   color: #fff;
-  font-size: 42px;
+  font-size: 28px;
   font-weight: bold;
   display: flex;
   letter-spacing: 1.5px;
   justify-content: center;
-  margin: 52px 0;
+  margin-top: 42px;
 }
 
 .nav-bar {
@@ -38,8 +39,8 @@ input, textarea {
 }
 
 .nav-bar-item {
-  font-size: 18px;
-  margin-right: 20px;
+  font-size: 14px;
+  margin-right: 16px;
 }
 
 .header {
@@ -54,29 +55,24 @@ input, textarea {
   font-size: 15px;
 }
 
-section {
-  text-align: center;
-}
-
-label {
-  font-size: 20px;
-}
-
 .language-card {
-  display: inline-block;
-  width: 60%;
+  display: flex;
+  justify-content: center !important;
   color: #000;
   border: none;
   border-radius: 8px;
+  margin: 0 10%;
 }
 
 .language-card-title {
-  font-size: 28px !important;
-  letter-spacing: 1px;
-  font-weight: light !important;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin-top: 5px;
 }
 
 .language-card-description {
+  font-size: 14px;
   line-height: 1.5rem;
   letter-spacing: 0.5px;
   margin-bottom: 18px;
@@ -91,14 +87,19 @@ label {
   background-color: rgb(225 78 202);
   border: none;
   color: #fff;
-  border-radius: 25px;
-  padding: 6px 24px;
+  border-radius: 5px;
+  padding: 4px 16px;
   margin-top: 10px;
-  font-size: 20px;
+  font-size: 12px;
   letter-spacing: 1px;
+  font-weight: bold;
 }
 
 @media (min-width: 1000px) {
+
+  .page-content {
+    
+  }
 
   .nav-bar {
     justify-content: end;
@@ -112,5 +113,7 @@ label {
     font-size: 12px;
   }
 
-
+  label {
+    font-size: 12px;
+  }
 }

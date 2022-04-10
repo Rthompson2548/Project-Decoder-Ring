@@ -13,8 +13,6 @@ html, body, #page {
 
 input, textarea {
   font-size: 16px !important;
-  border-radius: 20px;
-  padding: 12px 24px 12px 12px !important;
 }
 
 .page-content {
@@ -38,8 +36,8 @@ input, textarea {
 }
 
 .nav-bar-item {
-  font-size: 18px;
-  margin-right: 20px;
+  font-size: 14px;
+  margin-right: 16px;
 }
 
 .header {
@@ -74,6 +72,7 @@ label {
   font-size: 28px !important;
   letter-spacing: 1px;
   font-weight: light !important;
+  /* margin-top: 50px; */
 }
 
 .language-card-description {
@@ -99,6 +98,10 @@ label {
 }
 
 @media (min-width: 1000px) {
+
+  .page-content {
+    
+  }
 
   .nav-bar {
     justify-content: end;

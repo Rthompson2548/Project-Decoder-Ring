@@ -11,8 +11,7 @@
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo&family=Montserrat&family=Work+Sans&display=swap"
-  rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
   <title>Crypto-Messenger</title>
 </head>
 
@@ -42,36 +41,56 @@
 
     <div class="page-content">
       <!-- Caesar Shift -->
-      <section>
-        <div class="language-card" id="caesar-shift">
+      <section class="language-card">
+        <div id="caesar-shift">
           <div class="card-header">
             <h2 class="language-card-title">Caesar Shift</h2>
             </div>
             <div class="card-body">
-          
+            <!-- <p class="language-card-description"> The Caesar Shift is a type of substitution cipher originally used by
+              Julius Caesar to protect messages of military significance. It relies on taking the alphabet and
+              "shifting" letters to the right or left, based on the typical alphabetic order. </p> -->
             <form id="caesar">
-<!-- encode/decode radio option buttons -->
+
+              <!-- encode/decode radio option buttons -->
               <div class="encode-decode-options">
                 <!-- encode option radio button -->
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="caesar-options" id="caesar-options-encode" value="encode" checked />
+                <div class="form-check form-check-inline">        
                   
-                  <label class="form-check-label" for="caesar-options-encode">
-                    Encode
+                  <input 
+                  class="form-check-input" 
+                  type="radio" 
+                  name="caesar-options" id="caesar-options-encode" 
+                  value="encode"
+                  checked 
+                  />
+
+                  <label 
+                    class="form-check-label" for="caesar-options-encode">
+                      Encode
                   </label>
 
                 </div>
-<!-- decode option radio button -->
+
+                <!-- decode option radio button -->
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="caesar-options" id="caesar-options-decode" value="decode" />
                   
-                  <label class="form-check-label" for="caesar-options-decode">
-                    Decode
+                  <input 
+                    class="form-check-input" 
+                    type="radio" 
+                    name="caesar-options" id="caesar-options-decode" 
+                    value="decode" />
+
+                  <label 
+                    class="form-check-label" 
+                    for="caesar-options-decode">
+                      Decode
                   </label>
 
                 </div>
               </div>
 
+              
               <div class="form-group">
                 <label for="caesar-input">Your message</label>
                 <textarea class="form-control" id="caesar-input" rows="2" placeholder="Enter message..."></textarea>
@@ -81,7 +100,7 @@
                   <input type="number" class="form-control" id="caesar-shift" placeholder="Enter a number..." />
                 </div>
               <div class="submit-button-container">
-                <button class="submit-button" type="submit">Generate message</button>
+                <button class="submit-button" type="submit">GENERATE MESSAGE</button>
               </div>
             </form>
             </div>
@@ -91,8 +110,8 @@
           </div>
           </section>
       <!-- Polybius -->
-      <section>
-        <div class="language-card" id="polybius-square">
+      <section class="language-card">
+        <div id="polybius-square">
           <div class="card-header">
             <h2 class="language-card-title">Polybius Square</h2>
             </div>
@@ -117,7 +136,7 @@
                 <textarea class="form-control" id="polybius-input" rows="2" placeholder="Enter message..."></textarea>
                 </div>
               <div class="submit-button-container">
-                <button class="submit-button" type="submit">Generate message</button>
+                <button class="submit-button" type="submit">GENERATE MESSAGE</button>
               </div>
             </form>
             </div>
@@ -127,13 +146,16 @@
           </div>
           </section>
       <!-- Substitution -->
-      <section id="substitution-cipher">
-        <div class="language-card">
+      <section class="language-card" id="substitution-cipher">
+        <div>
           <div class="card-header">
             <h2 class="language-card-title">Substitution Cipher</h2>
             </div>
             <div class="card-body">
-          
+            <!-- <p class="language-card-description"> The Substitution Cipher requires a standard alphabet and a
+              substitution alphabet. Letters from the standard alphabet will be transposed to the standard alphabet.
+              This cipher requires that the recipient have the substitution alphabet, otherwise it will be difficult for
+              them to decode the message. </p> -->
             <form id="substitution">
               <div class="encode-decode-options">
                 <div class="form-check form-check-inline">
@@ -155,9 +177,11 @@
                   <label for="substitution-alphabet">Alphabet key</label>
                   <input type="text" class="form-control" id="substitution-alphabet" maxlength="26"
                     placeholder="Enter all alphabet letters in any order...." />
+
+                    <h6>or generate a random alphabet key</h6>
                 </div>
               <div class="submit-button-container">
-                <button class="submit-button" type="submit">Generate message</button>
+                <button class="submit-button" type="submit">GENERATE MESSAGE</button>
               </div>
             </form>
             </div>

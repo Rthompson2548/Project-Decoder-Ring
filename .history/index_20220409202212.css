@@ -13,8 +13,6 @@ html, body, #page {
 
 input, textarea {
   font-size: 16px !important;
-  border-radius: 20px;
-  padding: 12px 24px 12px 12px !important;
 }
 
 .page-content {
@@ -23,12 +21,12 @@ input, textarea {
 
 .page-title {
   color: #fff;
-  font-size: 42px;
+  font-size: 28px;
   font-weight: bold;
   display: flex;
   letter-spacing: 1.5px;
   justify-content: center;
-  margin: 52px 0;
+  margin-top: 42px;
 }
 
 .nav-bar {
@@ -38,8 +36,8 @@ input, textarea {
 }
 
 .nav-bar-item {
-  font-size: 18px;
-  margin-right: 20px;
+  font-size: 14px;
+  margin-right: 16px;
 }
 
 .header {
@@ -68,12 +66,14 @@ label {
   color: #000;
   border: none;
   border-radius: 8px;
+  margin: 0 10%;
 }
 
 .language-card-title {
   font-size: 28px !important;
-  letter-spacing: 1px;
-  font-weight: light !important;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin-top: 5px;
 }
 
 .language-card-description {
@@ -92,13 +92,17 @@ label {
   border: none;
   color: #fff;
   border-radius: 25px;
-  padding: 6px 24px;
+  padding: 6px 18px;
   margin-top: 10px;
   font-size: 20px;
   letter-spacing: 1px;
 }
 
 @media (min-width: 1000px) {
+
+  .page-content {
+    
+  }
 
   .nav-bar {
     justify-content: end;

@@ -3,6 +3,8 @@ const caesarModule = (function() {
         if (!shift || shift === 0 || shift < -25 || shift > 25) return false;
         /* create a variable that takes the input value and converts it to lower case letters so that all characters have the correct ascii values */
         let word = input.toLowerCase().split("");
+
+        /** will subtract the shift value from the word if "decode" to return the original letters of the word */
         if (!encode) shift = 0 - shift;
         // create a variable that maps each letter of the word
         const message = word.map((letter) => {
